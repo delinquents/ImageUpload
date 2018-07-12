@@ -1,0 +1,4 @@
+INSERT INTO product(price,name,description,image) VALUES (135,'Monitor','A computer monitor is an output device which displays information in pictorial form.',null );
+INSERT INTO product(price,name,description,image) VALUES (10,'Mouse','A computer mouse is a hand-held pointing device that detects two-dimensional motion relative to a surface.',null );
+INSERT INTO product(price,name,description,image) VALUES (800,'Mobile','A mobile phone, known as a cell phone in North America, is a portable telephone that can make and receive calls over a radio frequency link while the user is moving within a telephone service area.',null );
+INSERT INTO product(price,name,description,image) VALUES (2000,'Laptop',' Laptop, also called a notebook computer or just notebook, is a small, portable personal computer. ',null );

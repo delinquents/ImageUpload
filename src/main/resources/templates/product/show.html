@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"         >
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"
+            integrity="sha384-u/bQvRA/1bobcXlcEYpsEdFVK/vJs3+T+nXLsBYJthmdBuavHvAW6UsmqO2Gd/F9" crossorigin="anonymous">
+          </script>
+    <title>Product View</title>
+</head>
+<body>
+<!--/*@thymesVar id="product" type="com.velja.product.imageproductupload.model.Product"*/-->
+<H1 class="header-panel" align="center">Product View</H1>
+<div class="container-fluid" >
+
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+
+            <div class="card card-primary">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h6 class="card-title" th:text="${product.name}">Monitor</h6>
+                        </div>
+                        <div class="col-md-2">
+                            <a class="btn btn-default" href="#"
+                               th:href="@{'/product/' + ${product.id} + '/image'}" role="button">Change Image</a>
+                        </div>
+                    </div>
+                </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 offset-md-6 ">
+                                <div class="row">
+                                    <div class="col-md-6"><h6>Name : </h6></div>
+                                    <div class="col-md-6"><p th:text="${product.name}">Monitor</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6"><h6>Price : </h6> </div>
+                                    <div class="col-md-6"><p th:text="${product.price}+'$'">20 Rsd</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6"><h6>Details : </h6></div>
+                                    <div class="col-md-6"><p th:text="${product.description}">Dobar</p></div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="col-md-12">
+                                    <img src="../static/peripherals2-360x240.jpg"
+                                         th:src="@{'/product/' + ${product.getId()} + '/productimage'}"
+                                         width="360" height="240">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
